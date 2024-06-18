@@ -91,6 +91,11 @@ To tear down the infrastructure created by Terraform and avoid unnecessary AWS c
 
 Confirm by typing `yes` when prompted.
 
+## Contributing
+Contributions are welcome! If you find any issues or improvements, please open an issue or a pull request on GitHub.
+
+## License
+This project is licensed under the MIT License. See the LICENSE file for more details.
 
 
 
