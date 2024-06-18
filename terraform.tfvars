@@ -1,0 +1,14 @@
+region             = "us-east-1"
+ports              = [22, 80, 443, 3306, 27017, 4000]
+ami                = "ami-04b70fa74e45c3917"
+instance_type      = "t2.micro"
+key_name           = "fjdak"
+host-name          = "public-1a"
+connection-user    = "ubuntu"
+tg-name            = "tg-loadbalance"
+target_port        = 80
+tg_protocol        = "HTTP"
+enduserport        = "4000"
+load_balancer-name = "alb-webapp"
+elb-type           = "application"
+Environment        = "production"
