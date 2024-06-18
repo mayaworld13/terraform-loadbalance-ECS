@@ -14,6 +14,20 @@ This Terraform project sets up an AWS ECS (Elastic Container Service) cluster in
 https://github.com/mayaworld13/terraform-loadbalance-ECS/assets/127987256/6f7500d2-1360-45ed-a2e6-023c8615fe0e
 
 
+
+### ECS (Elastic Container Service):
+
+1. It is a fully managed container orchestration service provided by AWS.
+2. It allows you to run and manage Docker containers on a cluster of EC2 instances that you manage.
+3. ECS provides fine-grained control over your infrastructure, including EC2 instance types, scaling, and networking configurations.
+
+
+### Fargate:
+
+1. Fargate is a technology used by ECS (and also by Amazon EKS, the managed Kubernetes service) that allows you to run containers without managing the underlying EC2 instances.
+2. With Fargate, you specify your task definition, including CPU and memory requirements, and AWS handles the provisioning and scaling of the infrastructure for you.
+3. Fargate enables serverless container deployments, where you pay only for the resources consumed by your containers.
+
 ## Prerequisites
 
 Before you begin, ensure you have the following prerequisites:
