@@ -1,3 +1,11 @@
+<p align="center">
+  <img src="https://github.com/mayaworld13/terraform-loadbalance-ECS/assets/127987256/27b6aebd-fd30-48f6-83d4-98b4f2173367" alt="AWS VPC Project Diagram" width="700" height="600" />
+</p>
+
+
+
+
+
 # terraform-loadbalance-ECS
 ```plaintext
 VPC (aws_vpc.loadbalance)
