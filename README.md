@@ -1,41 +1,17 @@
-<p align="center">
+# Terraform AWS ECS Cluster with ALB
+
+This Terraform project sets up an AWS ECS (Elastic Container Service) cluster integrated with an ALB (Application Load Balancer) to deploy containerized applications. It automates the creation of necessary resources such as VPC, subnets, security groups, ECS cluster, ECS service, ALB, and related configurations using Infrastructure-as-Code principles.
+
+## Architecture Diagram
+
+<p>
   <img src="https://github.com/mayaworld13/terraform-loadbalance-ECS/assets/127987256/27b6aebd-fd30-48f6-83d4-98b4f2173367" alt="AWS VPC Project Diagram" width="700" height="600" />
 </p>
 
 
+## Demo-video
+
+https://github.com/mayaworld13/terraform-loadbalance-ECS/assets/127987256/6f7500d2-1360-45ed-a2e6-023c8615fe0e
 
 
 
-# terraform-loadbalance-ECS
-```plaintext
-VPC (aws_vpc.loadbalance)
-|
-|-- Internet Gateway (aws_internet_gateway.gateway)
-|
-|-- Public Subnet 1 (aws_subnet.pub)
-|   |
-|   |-- Route Table Association (aws_route_table_association.a)
-|
-|-- Public Subnet 2 (aws_subnet.public)
-|   |
-|   |-- Route Table Association (aws_route_table_association.b)
-|
-|-- Route Table (aws_route_table.pub)
-|
-|-- Security Group (aws_security_group.allow_tls)
-|
-|-- Application Load Balancer (aws_lb.test)
-|   |
-|   |-- ALB Listener (aws_lb_listener.front_end)
-|
-|-- ECS Cluster (aws_ecs_cluster.foo)
-|   
-|-- ECS Task Definition (aws_ecs_task_definition.test)
-|
-|-- ECS Service (aws_ecs_service.ecs)
-|   |
-|   |-- Network Configuration (subnets: [aws_subnet.pub.id, aws_subnet.public.id], security_groups: [aws_security_group.allow_tls.id])
-|   |-- Load Balancer Configuration (target_group_arn: aws_lb_target_group.target.arn)
-|
-|-- ALB Target Group (aws_lb_target_group.target)
-```
