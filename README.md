@@ -67,6 +67,31 @@ To deploy the infrastructure using Terraform, follow these steps:
    ```sh
    terraform apply --auto-approve
    ```
+---
+
+## Accessing the ECS Service
+
+After deployment, Terraform will output the DNS name of the ALB. Access the application deployed on ECS via this DNS name with the appropriate port.
+
+   ```bash
+       resource "null_resource" "open_browser" {
+       provisioner "local-exec" {
+       command = "start chrome http://${aws_lb.test.dns_name}:4000"
+       }
+       depends_on = [aws_ecs_service.ecs]
+    }
+   ```
+
+## Clean Up
+
+To tear down the infrastructure created by Terraform and avoid unnecessary AWS charges:
+
+    ```bash
+    terraform destroy --auto-approve
+    ```
+
+Confirm by typing `yes` when prompted.
+
 
 
 
