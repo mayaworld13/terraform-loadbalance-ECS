@@ -61,6 +61,8 @@ To deploy the infrastructure using Terraform, follow these steps:
    terrform plan
    ```
 
+   Terraform will display a plan showing what resources will be created. Confirm by typing `yes`.
+
 7. **Apply the configuration to create the infrastructure:**
    ```sh
    terraform apply --auto-approve
