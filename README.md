@@ -21,9 +21,7 @@ VPC (aws_vpc.loadbalance)
 |   |-- ALB Listener (aws_lb_listener.front_end)
 |
 |-- ECS Cluster (aws_ecs_cluster.foo)
-|   |
-|   |-- ECS Cluster Capacity Providers (aws_ecs_cluster_capacity_providers.example)
-|
+|   
 |-- ECS Task Definition (aws_ecs_task_definition.test)
 |
 |-- ECS Service (aws_ecs_service.ecs)
